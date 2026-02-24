@@ -8,7 +8,12 @@ from hospital_roster.models import Base, Employee, Shift
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
-templates = Jinja2Templates(directory="templates")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+templates = Jinja2Templates(
+    directory=os.path.join(BASE_DIR, "templates")
+)
 
 @app.get("/", response_class=HTMLResponse)
 def dashboard(request: Request):
