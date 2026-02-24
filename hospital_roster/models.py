@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Date, ForeignKey
-from database import Base
+from hospital_roster.database import Base
 
 class Employee(Base):
     __tablename__ = "employees"
