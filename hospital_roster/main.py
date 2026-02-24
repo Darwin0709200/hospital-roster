@@ -2,8 +2,8 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
-from database import engine, SessionLocal
-from models import Base, Employee, Shift
+from hospital_roster.database import engine, SessionLocal
+from hospital_roster.models import Base, Employee, Shift
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
