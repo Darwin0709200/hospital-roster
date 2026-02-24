@@ -1,8 +1,7 @@
 import random
 from datetime import date, timedelta
-from database import SessionLocal
-from models import Employee, Shift
-
+from hospital_roster.database import SessionLocal
+from hospital_roster.models import Employee, Shift
 db = SessionLocal()
 
 roles = (
